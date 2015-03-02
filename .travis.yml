@@ -1,4 +1,4 @@
 language: node_js
 node_js:
   - 0.12.0
-script: 'CODECLIMATE_REPO_TOKEN=783810a2b631e56ad6c3492c2ccbe694b616d5ebdf39949de6a64c0e1efe2897 && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | codeclimate && rm -rf ./coverage'
+script: 'CODECLIMATE_REPO_TOKEN=783810a2b631e56ad6c3492c2ccbe694b616d5ebdf39949de6a64c0e1efe2897 && node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | node_modules/.bin/codeclimate && rm -rf ./coverage'
