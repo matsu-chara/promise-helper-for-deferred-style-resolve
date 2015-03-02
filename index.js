@@ -1,2 +1,1 @@
-var deferred = require('./lib/promise-deferred.js');
-module.exports = deferred;
+module.exports = require('./lib/promise-deferred.js');

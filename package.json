@@ -1,14 +1,10 @@
 {
   "name": "promise-helper-for-deferred-style-resolve",
   "version": "0.0.1",
-  "description": "simple promise helper for calling resolve at outside of promise constructor like jQuery.deferred",
+  "description": "Simple promise helper for calling resolve at outside of promise constructor like jQuery.deferred",
   "main": "index.js",
   "directories": {
     "test": "test"
-  },
-  "dependencies": {
-    "chai": "^2.1.0",
-    "sinon": "^1.12.0"
   },
   "devDependencies": {
     "chai": "^2.1.0",

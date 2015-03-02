@@ -1,15 +1,46 @@
-# promise-deferred
+# promise-helper-for-deferred-style-resolve
 
-jQuery.deferredのようにresolve、rejectを外部から呼ぶためのヘルパー。
+[![Build Status](https://travis-ci.org/matsu-chara/promise-helper-for-deferred-style-resolve.svg?branch=master)](https://travis-ci.org/matsu-chara/promise-helper-for-deferred-style-resolve)
 
-```coffee
-deferred = require 'promise-deferred'
-{promise, resolve, reject}  = deferred(resolve, reject)
+A promise helper for deferred style resolve.
+
+You can write tests easily, without any jQuery.
+
+## How to use
+
+Get promise objcet, resolve & reject functions via promiseDeferred()
+
+```javascript
+var promiseDeferred = require('promise-helper-for-deferred-style-resolve');
+
+var response = promiseDeferred(function() {
+  return successCallback(data);
+}, function() {
+  return failCallback(data);
+});
+
+# response object is
+# {
+#  promise: promise,
+#  resolve: resolve,
+#  reject:  reject
+# }
 ```
 
-のように使うと、下のようなrequestを使ったテストがjQuery無しで簡単に書ける。
-(テストフレームワークはmocha)
+If you want writing success case, you just write `response.resolve()`, in your test case, The success calback will be called. And, you can also do failed case, call `response.reject()`.
 
+You can assert (and resolve) like below code.
+
+```javascript
+response.then(function() {
+    assert(callback.withArgs("success").calledOnce);
+    done()
+});
+response.resolve();
+```
+
+
+For example.
 
 ```coffee
 assert   = require 'power-assert'
