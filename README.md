@@ -2,8 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/promise-helper-for-deferred-style-resolve.svg)](http://badge.fury.io/js/promise-helper-for-deferred-style-resolve)
 [![Build Status](https://travis-ci.org/matsu-chara/promise-helper-for-deferred-style-resolve.svg?branch=master)](https://travis-ci.org/matsu-chara/promise-helper-for-deferred-style-resolve)
-[![Coverage Status](https://coveralls.io/repos/matsu-chara/promise-helper-for-deferred-style-resolve/badge.svg?branch=)](https://coveralls.io/r/matsu-chara/promise-helper-for-deferred-style-resolve?branch=master)
 [![Code Climate](https://codeclimate.com/github/matsu-chara/promise-helper-for-deferred-style-resolve/badges/gpa.svg)](https://codeclimate.com/github/matsu-chara/promise-helper-for-deferred-style-resolve)
+[![Test Coverage](https://codeclimate.com/github/matsu-chara/promise-helper-for-deferred-style-resolve/badges/coverage.svg)](https://codeclimate.com/github/matsu-chara/promise-helper-for-deferred-style-resolve)
 
 A promise helper for deferred style resolve.
 
