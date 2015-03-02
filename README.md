@@ -6,6 +6,10 @@ A promise helper for deferred style resolve.
 
 You can write tests easily, without any jQuery.
 
+The test pattern idea is from [Testing jQuery ajax with mocha and sinon](http://blog.revathskumar.com/2013/03/testing-jquery-ajax-with-mocha-and-sinon.html).
+
+`jQuery.deferred()` can call `d.resolve()`, but `Promise` can't call `p.resolve()`. This helper allows calling p.resolve().
+
 ## How to use
 
 Get promise objcet, resolve & reject functions via promiseDeferred()
