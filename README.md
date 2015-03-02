@@ -17,13 +17,13 @@ Get promise objcet, resolve & reject functions via promiseDeferred()
 ```javascript
 var promiseDeferred = require('promise-helper-for-deferred-style-resolve');
 
-var response = promiseDeferred(function() {
+var pd = promiseDeferred(function() {
   return successCallback(data);
 }, function() {
   return failCallback(data);
 });
 
-# response object is
+# pd object is
 # {
 #  promise: promise,
 #  resolve: resolve,
@@ -31,16 +31,16 @@ var response = promiseDeferred(function() {
 # }
 ```
 
-If you want writing success case, you just write `response.resolve()`, in your test case, The success calback will be called. And, you can also do failed case, call `response.reject()`.
+If you want writing success case, you just write `pd.resolve()`, in your test case, The success calback will be called. And, you can also do failed case, call `pd.reject()`.
 
 You can assert (and resolve) like below code.
 
 ```javascript
-response.then(function() {
+pd.then(function() {
     assert(callback.withArgs("success").calledOnce);
     done()
 });
-response.resolve();
+pd.resolve();
 ```
 
 
